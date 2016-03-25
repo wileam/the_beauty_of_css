@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS 之美 - 吴梦圆</title>
+
+        <meta name="description" content="The beauty of CSS">
+        <meta name="author" content="Joanna Wu/wileam">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>CSS之美</h1>
+
+                    <p class="fragment">一些有趣的交互实例分享</p>
+
+                    
+                    <small style="margin-top: 20px;">
+                        <a href="wileam.com">吴梦圆@阿里云</a>
+                        <br>
+                        Women Techmaker 2016.03.26
+                    </small>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        <img src="images/css_beauty/avatar.jpg"/ style="border-radius: 100%;">
+
+                        ## 吴梦圆
+
+                        - 阿里云 体验技术部 前端开发工程师
+
+                        <br>
+
+                        <small>
+                            <a href="wileam.com">主页</a>
+                            /
+                            <a href="github.com/wileam">Github</a>
+                            /
+                            <a href="https://www.douban.com/people/wileam/">Douban</a>
+                            /
+                            <a href="weibo.com/wileam">@小雪-Joanna</a>
+                        </small>
+
+                    </script>
+                </section>
+
+                <section>
+                    <div class="stretch">
+                        <img src="images/css_beauty/html-css-js.png" alt="">
+                    </div>
+                </section>
+
+                
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                        # Shapes Of CSS
+
+                        ```css
+                        #rectangle {
+                            width: 200px;
+                            height: 100px;
+                        }
+                        #circle { 
+                            width: 100px; 
+                            height: 100px;
+                            border-radius: 50px; 
+                        }
+                        ```
+                        Ref: https://css-tricks.com/examples/ShapesOfCSS/
+                        </script>
+                    </section>
+                    <section>
+                        <h2>CSS Triangle</h2>
+                        <div class="stretch">
+                            <iframe height='100%' scrolling='no' src='http://codepen.io/SaraSoueidan/embed/c21a82da3888d518450edc759f3b905a/?height=642&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/SaraSoueidan/pen/c21a82da3888d518450edc759f3b905a'>Adobe CSS vs SVG - Arbitrary Shapes</a> by Sara Soueidan</iframe>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Login</h1>
+                        <div class="stretch">
+                            <img src="images/css_beauty/password_readme_io.gif" alt="">
+                        </div>
+                        <a href="https://dash.readme.io/login" target="_blank">try online</a>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## CSS Transition
+                        ```css
+                        /* property name | duration | timing function | delay */
+                        transition: margin-left 4s ease-in-out 1s;
+                        ```
+                        </script>
+                    </section>
+                    <section>
+                        <div>
+                            <img src="images/css_beauty/owl-login.png" alt="">
+                        </div>
+                        <div>
+                            <img src="images/css_beauty/password-hand.gif" alt="">
+                        </div>
+                        <div>
+                            <img src="images/css_beauty/password-arm.gif" alt="">
+                        </div>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        <div>
+                            <img src="images/css_beauty/password-hand.gif" alt="">
+                        </div>
+
+                        ```css
+                        .hand {
+                            width:34px;
+                            height:34px;
+                            border-radius: 34px;
+                            transform: scaleY(0.6);
+                        }
+                        ```
+
+                        ```css
+                        .hand {
+                            transition: 0.3s ease-out;
+                        }
+                        /* status 1 */
+                        .hand {
+                            transform: scaleY(0.6);
+                        }
+                        /* status 2 */
+                        .password .hand {
+                            transform: translateX(42px) translateY(-15px) scale(0.7);
+                        }
+                        ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        <div>
+                            <img src="images/css_beauty/owl-login-arm.png" alt="">
+                            <img src="images/css_beauty/password-arm.gif" alt="">
+                        </div>
+
+                        ```css
+                        .arm {
+                            background-image:url;
+                            transform: scaleY(0.6);
+                        }
+                        .arm.arm-r {
+                            transform: scaleX(-1);
+                        }
+                        ```
+
+                        ```css
+                        .arm {
+                            transition: 0.3s ease-out;
+                        }
+                        /* status 1 */
+                        .arm {
+                            transform: scaleY(0.6);
+                        }
+                        /* status 2 */
+                        .password .arm {
+                            transform: translateY(-40px) translateX(40px); 
+                        }
+                        ```
+                        </script>
+                    </section>
+                    <section>
+                        <h1>Result</h1>
+                        <div class="stretch">
+                            <img src="images/css_beauty/password_readme_io.gif" alt="">
+                        </div>
+                        <a href="https://dash.readme.io/login" target="_blank">try online</a>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Signup</h1>
+                        <div class="stretch">
+                            <img src="images/css_beauty/basecamp-signup.gif" alt="">
+                        </div>
+                    </section>
+                    <section data-markdown>
+                        ## Key:
+                        - sprite
+                        - background-position
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Loading</h1>
+                        <div class="stretch">
+                            <img src="images/css_beauty/loading.gif" alt="">
+                        </div>
+                        <a href="http://rachelnabors.com/">Check it out</a>
+                    </section>
+                    
+                    <section>
+                        <div class="stretch">
+                        <img src="images/css_beauty/bg_spinner-body.png" alt="">
+                        <img class="fragment" src="images/css_beauty/sprite_spinner-hands.png" alt="" height="100%">
+                        <img class="fragment"  src="images/css_beauty/sprite_spinner-expressions.png" alt="" height="100%">
+                        </div>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## CSS Animation
+                        ```css
+                        /* @keyframes duration | timing-function | delay | 
+   iteration-count | direction | fill-mode | play-state | name */
+                        animation: 3s ease-in 1s 2 reverse both paused slidein;
+                        ```
+
+                        ```css
+                        @keyframes <identifier> {
+                          [ [ from | to | <percentage> ] [, from | to | <percentage> ]* block ]*
+                        }
+                        ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## Hands
+                        ```css
+                        .hands {
+                            animation: spin 0.5s steps(5) infinite;
+                            background: url(sprite_spinner-hands.png);
+                        }
+                        /* steps(5) only 5 keyframes happen in 0.5s. */
+
+                        @keyframes spin {
+                            0% {
+                                background-position: 0 0
+                            }
+
+                            100% {
+                                background-position: 0 -1015px
+                            }
+                        }
+                        ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## Face
+                        ```css
+                        .face {
+                            animation: 
+                                pfft 1s steps(1) 1 8s,
+                                haha 0.5s steps(2, end) 11s 10,
+                                oops 10s steps(1) 16s 1;
+                        }
+                        @keyframes pfft {
+                            0% {
+                                background-position: 0 0
+                            }
+
+                            100% {
+                                background-position: 0 -121px
+                            }
+                        }
+                        @keyframes haha {
+                            0% {
+                                background-position: 0 -243px
+                            }
+
+                            100% {
+                                background-position: 0 -486px
+                            }
+                        }
+                        @keyframes oops {
+                            0% {
+                                background-position: 0 -486px
+                            }
+
+                            100% {
+                                background-position: 0 -607px
+                            }
+                        }
+                        ```
+                        </script>
+                    </section>
+                </section> 
+
+                <section>
+                    <section>
+                        <h1>Team</h1>
+                        <div class="stretch">
+                            <img src="images/css_beauty/about.gif" alt="">
+                        </div>
+                    </section>
+                    <section data-markdown>
+                        ## Key:
+
+                        - Sprite
+                        - Cursor
+                    </section>
+                </section>
+
+                <section >
+                    <section data-markdown>
+                        # Inspiration
+
+                        - [Little Big Details](http://littlebigdetails.com/)
+
+                        - [CSS Design Award](http://www.cssdesignawards.com/wotd-award-nominees)
+                        
+                        - [AWWWARDS](http://www.awwwards.com/awards-of-the-day/)
+                    </section>
+                    <section data-background="images/css_beauty/littlebigdetails.png">
+                        
+                    </section>
+                    <section data-background="images/css_beauty/cssdesignawards.png">
+                        
+                    </section>
+                    <section data-background="images/css_beauty/awwwards.png">
+                        
+                    </section>
+                </section>
+
+                <section data-markdown>
+                    # Tech
+                    
+                    - CSS Animation / keyframes
+                    - CSS Transform
+                    - New API: [RequestAnimationFrame](https://www.w3.org/TR/animation-timing/) & [Will-Change](https://drafts.csswg.org/css-will-change/)
+                    - Frameworks: [Famous](http://famous.org/) / [GreenSocks](https://greensock.com/)
+                    - Performance
+                </section>
+
+                <section data-background="images/css_beauty/ux.png">
+                </section>
+
+                <section data-markdown>
+                    # CSS Game?
+                </section>
+
+                <section>
+                    <img src="images/css_beauty/dou.jpg" alt="">
+                </section>
+
+                <section>
+                    <section>
+                        <div class="stretch">
+                            <iframe height='100%' scrolling='no' src='http://codepen.io/wileam/embed/GZEKdQ/?height=642&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/wileam/pen/GZEKdQ/'>Awesome CSS Game</a> by Joanna Wu (<a href='http://codepen.io/wileam'>@wileam</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Key:</h2>
+
+                        <p class="fragment">1. clip-path to draw the wall (chrome only)</p>
+                        <p class="fragment">2. CSS transitions to slowly move the scenery</p>
+                        <p class="fragment">3. Hover states for the two walls (and the "game over" screen)</p>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Thank you</h1>
+                    <img src="images/css_beauty/avatar.jpg"/ style="border-radius: 100%;">
+
+                    <h2>吴梦圆</h2>
+
+                    <ul>
+                        <li>阿里云 体验技术部 前端开发工程师</li>
+                    </ul>
+
+                    <br>
+                    <br>
+
+                    <small>
+                        <a href="wileam.com">主页</a>
+                        /
+                        <a href="github.com/wileam">Github</a>
+                        /
+                        <a href="https://www.douban.com/people/wileam/">Douban</a>
+                        /
+                        <a href="weibo.com/wileam">@小雪-Joanna</a>
+                    </small>
+                </section>
+
+            </div>
+        </div>
+
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+        </script>
+    </body>
+</html>
